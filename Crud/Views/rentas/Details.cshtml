@@ -1,0 +1,42 @@
+﻿@model Crud.Models.renta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>renta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clientes.nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clientes.nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.peliculas.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.peliculas.titulo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idRenta }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
